@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>Index</title>
+</head>
+<body>
+	<p />
+	<a href="/login">Login</a>
+	<p />
+	<a href="/registration">Registration</a>
+	<p />
+	<a href="/about">About</a>
+	<p />
+	<div th:if="${isAdmin}">
+		<a href="/admin/config">Config</a>
+	</div>
+	<div th:if="${isLogin}">
+
+		<p th:text="${userEmail}" />
+		<br />
+		<form th:action="@{/logout}" method="post">
+			<input type="submit" value="Wyloguj" />
+		</form>
+	</div>
+</body>
+</html>

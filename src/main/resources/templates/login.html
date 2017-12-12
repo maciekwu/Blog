@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>Login</title>
+</head>
+<body>
+	<h3>Login</h3>
+	<div th:if="${param.error}">Email or Password invalid, please
+		verify</div>
+
+	<form th:action="@{/login}" method="post">
+		<p />
+		<input type="text" name="email" placeholder="input email" />
+		<p />
+		<input type="password" name="password" placeholder="input password" />
+		<p />
+		<input type="Submit" value="Zaloguj" />
+	</form>
+
+
+</body>
+</html>
